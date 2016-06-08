@@ -1,0 +1,12 @@
+﻿@model MvcApplication29.Models.ShowImageViewModel
+
+<div class="row" style="text-align: center;" data-image-id="@Model.Image.Id">
+    <h3>Image uploaded by @Model.Image.FirstName @Model.Image.LastName on @Model.Image.DateUploaded.ToShortDateString()</h3>
+    <img style="max-width: 800px;" src="/Images/@Model.Image.ImageFileName" />
+    <h4>View Count: <span id="viewCount">@Model.Image.ViewCount</span></h4>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/show-image.js"></script>
+}
